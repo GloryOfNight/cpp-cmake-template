@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 3.20.0)
 
 project(cpp-cmake-template
-        VERSION 0.0
         DESCRIPTION ""
         HOMEPAGE_URL ""
         LANGUAGES CXX C)
 
-# Setup project options and variables
+# Setup global project options and variables
 include(cmake/ProjectOptions.cmake)
 
 # Do not allow to build in root directory
@@ -15,10 +14,10 @@ include(cmake/PreventInSourceBuilds.cmake)
 add_executable(${PROJECT_NAME} "src/main.cxx")
 # add_library(${PROJECT_NAME} STATIC "src/main.cxx")
 
+# Optional clang-tidy support
 find_program(CLANG_TIDY_EXE NAMES "clang-tidy")
 if(CLANG_TIDY_EXE)
-        set(CLANG_TIDY_COMMAND "${CLANG_TIDY_EXE}")
-        set_target_properties(${PROJECT_NAME} PROPERTIES CXX_CLANG_TIDY "${CLANG_TIDY_COMMAND}")
+        set_target_properties(${PROJECT_NAME} PROPERTIES CXX_CLANG_TIDY "${CLANG_TIDY_EXE}")
 endif()
 
 # Optional sanitizers
