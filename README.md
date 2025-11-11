@@ -1,5 +1,5 @@
 > [!NOTE]
-> This template for your C++ projects, using: CMake, clang, ninja-build (cmake generator)
+> This template for your C++ projects, using: CMake, clang, msvc or ninja
 >
 > Make sure you have dependencies on your system and if not, you can find help below.
 
@@ -7,7 +7,7 @@
 
 1. Install [LLVM](https://github.com/llvm/llvm-project/releases). While installing make sure to set PATHs.
 2. Install [CMake](https://cmake.org/download/). While installing make sure to set PATHs. 
-3. Install [Ninja](https://github.com/ninja-build/ninja/releases). Just place .exe in CMake/bin folder.
+3. (optional) Install [Ninja](https://github.com/ninja-build/ninja/releases). Just place .exe in CMake/bin folder.
 
 # Linux
 
