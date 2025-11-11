@@ -1,22 +1,24 @@
 {
     "version": 8,
     "configurePresets": [
-    {
-      "name": "msvc2026",
-      "displayName": "Visual Studio 18 2026",
-      "generator": "Visual Studio 18 2026",
-      "installDir": "${sourceDir}/install",
-      "binaryDir": "${sourceDir}/build",
-      "condition": {
-        "type": "equals",
-        "lhs": "${hostSystemName}",
-        "rhs": "Windows"
+      {
+        "name": "msvc2026",
+        "displayName": "Visual Studio 18 2026",
+        "description": "Default build using Visual Studio 18 2026 generator",
+        "generator": "Visual Studio 18 2026",
+        "architecture": "x64",
+        "installDir": "${sourceDir}/install",
+        "binaryDir": "${sourceDir}/build",
+        "condition": {
+          "type": "equals",
+          "lhs": "${hostSystemName}",
+          "rhs": "Windows"
+        }
       }
-    }
   ],
   "buildPresets": [
     {
-      "name": "msvc2026",
+      "name": "msvc2026-debug",
       "displayName": "Debug",
       "configurePreset": "msvc2026",
       "configuration": "Debug"

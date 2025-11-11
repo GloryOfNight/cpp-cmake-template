@@ -1,22 +1,24 @@
 {
     "version": 8,
     "configurePresets": [
-    {
-      "name": "msvc2022",
-      "displayName": "Visual Studio 17 2022",
-      "generator": "Visual Studio 17 2022",
-      "installDir": "${sourceDir}/install",
-      "binaryDir": "${sourceDir}/build",
-      "condition": {
-        "type": "equals",
-        "lhs": "${hostSystemName}",
-        "rhs": "Windows"
+      {
+        "name": "msvc2022",
+        "displayName": "Visual Studio 17 2022",
+        "description": "Default build using Visual Studio 17 2022 generator",
+        "generator": "Visual Studio 17 2022",
+        "architecture": "x64",
+        "installDir": "${sourceDir}/install",
+        "binaryDir": "${sourceDir}/build",
+        "condition": {
+          "type": "equals",
+          "lhs": "${hostSystemName}",
+          "rhs": "Windows"
+        }
       }
-    }
   ],
   "buildPresets": [
     {
-      "name": "msvc2022",
+      "name": "msvc2022-debug",
       "displayName": "Debug",
       "configurePreset": "msvc2022",
       "configuration": "Debug"

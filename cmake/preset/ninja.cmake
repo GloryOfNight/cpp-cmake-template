@@ -1,22 +1,22 @@
 {
     "version": 8,
     "configurePresets": [
-    {
-      "name": "ninja-multi",
-      "displayName": "Ninja Multi-Config",
-      "description": "Default build using Ninja Multi-Config generator",
-      "generator": "Ninja Multi-Config",
-      "installDir": "${sourceDir}/install",
-      "binaryDir": "${sourceDir}/build",
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "clang",
-        "CMAKE_CXX_COMPILER": "clang++"
+      {
+        "name": "ninja-multi",
+        "displayName": "Ninja Multi-Config",
+        "description": "Default build using Ninja Multi-Config generator",
+        "generator": "Ninja Multi-Config",
+        "installDir": "${sourceDir}/install",
+        "binaryDir": "${sourceDir}/build",
+        "cacheVariables": {
+          "CMAKE_C_COMPILER": "clang",
+          "CMAKE_CXX_COMPILER": "clang++"
+        }
       }
-    }
   ],
   "buildPresets": [
     {
-      "name": "ninja",
+      "name": "ninja-debug",
       "displayName": "Debug",
       "configurePreset": "ninja-multi",
       "configuration": "Debug"

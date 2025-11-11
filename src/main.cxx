@@ -1,9 +1,10 @@
-#include <iostream>
-
 #include <format>
+#include <iostream>
+#include <bit>
 
 int main(int argc, char** argv)
 {
-	std::cout << std::format("{}, {}!", "Hello", "world") << std::endl;
+	const char* endianness = std::endian::native == std::endian::little ? "little" : "big";
+	std::cout << std::format("{}, {}! sizeof(void*) == {}. Endianness == {}", "Hello", "world", sizeof(void*), endianness) << std::endl;
 	return 0;
 }
